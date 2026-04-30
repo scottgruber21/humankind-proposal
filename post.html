@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Clinical Bridge | Human Kind Advocates</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap');
+        
+        :root {
+            --bg-beige: #F5F2ED; 
+            --royal-blue: #0038A8; 
+            --text-dark: #1A1A1A;
+            --white: #FFFFFF;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--white); color: var(--text-dark); font-family: 'Inter', sans-serif; line-height: 1.8; }
+        h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--royal-blue); }
+
+        /* Global Header (Static) */
+        nav { padding: 1.5rem 5%; display: flex; justify-content: space-between; align-items: center; background: var(--bg-beige); border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; }
+        .brand-name { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-style: italic; color: var(--royal-blue); text-decoration: none; }
+
+        /* Article Header (Only needs Title & Date) */
+        .article-header { padding: 8rem 5% 4rem; text-align: center; max-width: 900px; margin: 0 auto; }
+        .meta { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: #888; margin-bottom: 1rem; display: block; }
+        .article-header h1 { font-size: 4rem; line-height: 1.1; margin-bottom: 2rem; }
+
+        /* Content Area (Everything is styled via the CSS below) */
+        .content-wrap { max-width: 700px; margin: 0 auto; padding: 0 5% 10rem; }
+        
+        .content-body p { margin-bottom: 2rem; font-size: 1.15rem; color: #333; }
+        
+        /* Kim just uses standard blockquotes in her text to get this look */
+        .content-body blockquote { 
+            font-family: 'Cormorant Garamond', serif; 
+            font-size: 2.2rem; 
+            font-style: italic; 
+            color: var(--royal-blue); 
+            margin: 4rem 0; 
+            padding-left: 2rem; 
+            border-left: 2px solid var(--royal-blue);
+            line-height: 1.3;
+        }
+
+        /* Global Footer/Author (Static - she never touches this) */
+        .author-card { 
+            margin-top: 6rem; 
+            padding: 3rem; 
+            background: var(--bg-beige); 
+            display: flex; 
+            gap: 2rem; 
+            align-items: center; 
+        }
+        .author-img { width: 80px; height: 80px; background: #ddd; border-radius: 50%; }
+        .author-text h4 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+        .author-text p { font-size: 0.9rem; color: #666; line-height: 1.5; margin: 0; }
+
+        /* Integrity Note (Static) */
+        .integrity-footer { 
+            margin-top: 4rem; 
+            font-size: 0.8rem; 
+            text-align: center; 
+            color: var(--royal-blue); 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+            opacity: 0.7;
+        }
+
+        footer { padding: 4rem 5%; background: #fafafa; border-top: 1px solid #eee; text-align: center; font-size: 0.8rem; color: #999; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/" class="brand-name">Human Kind Advocates</a>
+        <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">
+            <a href="#" style="text-decoration: none; color: var(--text-dark);">Back to Insights</a>
+        </div>
+    </nav>
+
+    <article>
+        <header class="article-header">
+            <span class="meta">April 28, 2026 &bull; Clinical Navigation</span>
+            <h1>Why the "Best" Doctors Aren't Always Enough.</h1>
+        </header>
+
+        <div class="content-wrap">
+            <div class="content-body">
+                <p>When you have a serious diagnosis, the natural instinct is to find the "best" doctor. You look for the chief of surgery at a major university hospital or the oncologist with the most published papers. And while having a brilliant physician is critical, it is only half of the equation.</p>
+
+                <blockquote>"I speak your doctors' language so that nothing falls through the cracks."</blockquote>
+
+                <p>The missing half is navigation. A brilliant doctor is often a busy doctor. They are operating within large institutions with fixed protocols. They have fifteen minutes to explain a pathology report that will dictate the next six months of your life.</p>
+
+                <p>My role as a Physician Assistant and advocate is to sit on your side of the table. I read every page of those records, identify where the gaps are, and ensure that the decisions you make are based on clarity, not just momentum.</p>
+
+                <div class="author-card">
+                    <div class="author-img"></div>
+                    <div class="author-text">
+                        <h4>Kim Gruber, PA-C</h4>
+                        <p>With 15 years of clinical experience in oncology and bone marrow transplant, Kim provides expert navigation for families facing complex medical situations.</p>
+                    </div>
+                </div>
+
+                <div class="integrity-footer">
+                    Clinical Integrity: No referral fees are ever paid or accepted.
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        &copy; 2026 Human Kind Advocates &bull; Private Patient Advocacy
+    </footer>
+
+</body>
+</html>

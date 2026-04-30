@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights | Human Kind Advocates</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap');
+        
+        :root {
+            --bg-beige: #F5F2ED; 
+            --royal-blue: #0038A8; 
+            --text-dark: #1A1A1A;
+            --text-muted: #555555;
+            --white: #FFFFFF;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg-beige); color: var(--text-dark); font-family: 'Inter', sans-serif; line-height: 1.6; }
+        h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 400; color: var(--royal-blue); }
+        
+        /* Navigation (Consistent with previous mockups) */
+        nav { padding: 2rem 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .logo-area { display: flex; align-items: center; gap: 1rem; }
+        .logo-box { width: 35px; height: 35px; background: var(--royal-blue); border-radius: 4px; }
+        .brand-name { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-style: italic; }
+        .nav-links a { text-decoration: none; color: var(--text-dark); margin-left: 2rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+
+        /* Archive Header - Asymmetrical layout */
+        .archive-header { padding: 8rem 5% 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: flex-end; }
+        .archive-header h1 { font-size: 5rem; line-height: 0.9; }
+        .archive-header p { font-size: 1.1rem; color: var(--text-muted); max-width: 400px; }
+
+        /* Featured Article - To highlight her best case studies/insights */
+        .featured-post { margin: 4rem 5%; background: var(--white); display: flex; align-items: stretch; border: 1px solid #eee; position: relative; }
+        .featured-img { flex: 1.2; background: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80') center/cover; min-height: 500px; }
+        .featured-content { flex: 1; padding: 5rem; display: flex; flex-direction: column; justify-content: center; }
+        .featured-content .label { text-transform: uppercase; font-size: 0.75rem; letter-spacing: 2px; color: var(--royal-blue); font-weight: 600; margin-bottom: 1rem; }
+        .featured-content h2 { font-size: 3rem; margin-bottom: 1.5rem; line-height: 1.1; }
+        .featured-content p { color: var(--text-muted); margin-bottom: 2rem; }
+
+        /* The List - Minimalist vertical rows */
+        .post-list { padding: 4rem 5% 10rem; max-width: 1200px; margin: 0 auto; }
+        .post-row { 
+            display: grid; 
+            grid-template-columns: 1fr 3fr 1.5fr; 
+            padding: 3rem 0; 
+            border-bottom: 1px solid rgba(0, 56, 168, 0.1); 
+            align-items: baseline;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+        .post-row:hover { background: rgba(255,255,255,0.4); padding-left: 2rem; }
+        .post-date { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #888; }
+        .post-title h3 { font-size: 2rem; color: var(--text-dark); transition: color 0.3s; }
+        .post-row:hover .post-title h3 { color: var(--royal-blue); }
+        .post-excerpt { font-size: 0.95rem; color: var(--text-muted); text-align: right; font-style: italic; font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; }
+
+        footer { padding: 4rem 5%; background: var(--royal-blue); color: var(--white); display: flex; justify-content: space-between; align-items: center; }
+        .footer-integrity { font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase; opacity: 0.7; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-area">
+            <div class="logo-box"></div>
+            <span class="brand-name">Human Kind Advocates</span>
+        </div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/services">Services</a>
+            <a href="/contact">Inquire</a>
+        </div>
+    </nav>
+
+    <header class="archive-header">
+        <h1>Clinical<br>Insights.</h1>
+        <p>A library of clinical navigation perspectives for families facing high-stakes medical decisions.</p>
+    </header>
+
+    <a href="/blog/case-study" class="featured-post">
+        <div class="featured-img"></div>
+        <div class="featured-content">
+            <span class="label">Featured Insight</span>
+            <h2>The high cost of a medical "wrong turn."</h2>
+            <p>How clinical advocacy saved one family $180,000 and six months of recovery by identifying a clinical trial institution before surgery.</p>
+            <span style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--royal-blue); border-bottom: 1px solid; padding-bottom: 4px; align-self: flex-start;">Read Case Study</span>
+        </div>
+    </a>
+
+    <main class="post-list">
+        <a href="/blog/post" class="post-row">
+            <div class="post-date">April 2026</div>
+            <div class="post-title">
+                <h3>The Knowledge Gap in Oncology</h3>
+            </div>
+            <div class="post-excerpt">
+                "Most families don't know what they don't know..."
+            </div>
+        </a>
+
+        <a href="/blog/post" class="post-row">
+            <div class="post-date">March 2026</div>
+            <div class="post-title">
+                <h3>Second Opinions: Speed vs. Protocol</h3>
+            </div>
+            <div class="post-excerpt">
+                Why a "busy" system is a clinical risk.
+            </div>
+        </a>
+
+        <a href="/blog/post" class="post-row">
+            <div class="post-date">February 2026</div>
+            <div class="post-title">
+                <h3>Communicating with Specialists</h3>
+            </div>
+            <div class="post-excerpt">
+                Speaking the doctors' language peer-to-peer.
+            </div>
+        </a>
+
+        <a href="/blog/post" class="post-row">
+            <div class="post-date">January 2026</div>
+            <div class="post-title">
+                <h3>Retainers vs. Hourly Advocacy</h3>
+            </div>
+            <div class="post-excerpt">
+                Risk management for High-Net-Worth families.
+            </div>
+        </a>
+    </main>
+
+    <footer>
+        <span class="brand-name" style="color: white;">Human Kind Advocates</span>
+        <span class="footer-integrity">Integrity Focused &bull; No Referral Fees</span>
+    </footer>
+
+</body>
+</html>

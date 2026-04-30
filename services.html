@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Human Kind Advocates</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap');
+
+        :root {
+            --bg-beige: #F5F2ED;
+            --royal-blue: #0038A8;
+            --text-dark: #1A1A1A;
+            --text-muted: #555555;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-beige);
+            color: var(--text-dark);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+            color: var(--royal-blue);
+        }
+
+        nav {
+            padding: 2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--bg-beige);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-box {
+            width: 35px;
+            height: 35px;
+            background: var(--royal-blue);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .brand-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-style: italic;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            margin-left: 2rem;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        /* Hero */
+        .services-hero {
+            padding: 8rem 5%;
+            text-align: center;
+            background: var(--white);
+            border-bottom: 1px solid #eee;
+        }
+
+        .services-hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .services-hero p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            color: var(--text-muted);
+        }
+
+        /* The Pillars: What she actually does */
+        .pillars {
+            padding: 8rem 5%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4rem;
+        }
+
+        .pillar-item {
+            padding-bottom: 3rem;
+            border-bottom: 1px solid rgba(0, 56, 168, 0.1);
+        }
+
+        .pillar-item h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .pillar-item p {
+            color: var(--text-muted);
+        }
+
+        /* Engagement Tiers: The Vertical Menu */
+        .engagement-tiers {
+            padding: 8rem 5%;
+            background: var(--bg-beige);
+        }
+
+        .tier-row {
+            display: grid;
+            grid-template-columns: 1.5fr 2.5fr 1fr;
+            gap: 4rem;
+            padding: 5rem 0;
+            border-bottom: 1px solid rgba(0, 56, 168, 0.2);
+            align-items: flex-start;
+        }
+
+        .tier-row:last-child {
+            border-bottom: none;
+        }
+
+        .tier-meta h4 {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .tier-meta h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .tier-price {
+            font-family: 'Cormorant+Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--royal-blue);
+            font-style: italic;
+        }
+
+        .tier-details ul {
+            list-style: none;
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .tier-details li {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .tier-details li::before {
+            content: "—";
+            color: var(--royal-blue);
+        }
+
+        .tier-cta {
+            text-align: right;
+        }
+
+        .btn-outline {
+            display: inline-block;
+            border: 1px solid var(--royal-blue);
+            padding: 1rem 2rem;
+            text-decoration: none;
+            color: var(--royal-blue);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline:hover {
+            background: var(--royal-blue);
+            color: white;
+        }
+
+        /* FAQ / Objection Handling */
+        .faq {
+            padding: 8rem 5%;
+            background: var(--white);
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+        }
+
+        .faq-item {
+            margin-bottom: 3rem;
+        }
+
+        .faq-item h4 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--royal-blue);
+        }
+
+        .faq-item p {
+            color: var(--text-muted);
+        }
+
+        footer {
+            padding: 4rem 5%;
+            background: var(--royal-blue);
+            color: var(--white);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo-area">
+            <div class="logo-box">HKA</div>
+            <span class="brand-name">Human Kind Advocates</span>
+        </div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="#pillars">Methodology</a>
+            <a href="#tiers">Engagement</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <header class="services-hero">
+        <h1>Clinical Stewardship</h1>
+        <p>Expert clinical navigation for high-stakes medical situations. I provide the professional advocacy and record
+            translation required to make life-altering decisions with clarity.</p>
+    </header>
+
+    <section class="pillars" id="pillars">
+        <div class="pillar-item">
+            <h3>Record Review & Translation</h3>
+            <p>I review every page of your medical records and translate complex pathology, staging, and treatment
+                options into plain language for your family.</p>
+        </div>
+        <div class="pillar-item">
+            <h3>Second Opinion Coordination</h3>
+            <p>I identify lead institutions in specific specialties and facilitate rapid second opinions to ensure no
+                protocol is overlooked.</p>
+        </div>
+        <div class="pillar-item">
+            <h3>Provider Communication</h3>
+            <p>I communicate directly with your care team in peer-to-peer clinical language, ensuring that nothing is
+                lost in translation during brief appointments.</p>
+        </div>
+        <div class="pillar-item">
+            <h3>Appointment Navigation</h3>
+            <p>I prepare you before every appointment and debrief with you after, ensuring you understand every option
+                presented by your specialists.</p>
+        </div>
+    </section>
+
+    <section class="engagement-tiers" id="tiers">
+        <div class="tier-row">
+            <div class="tier-meta">
+                <h4>Entry</h4>
+                <h2>Clarity Consultation</h2>
+                <div class="tier-price">$500 One-Time</div>
+            </div>
+            <div class="tier-details">
+                <p>The clearest 90 minutes you'll spend on this diagnosis. Best for early-stage navigation or
+                    second-opinion decisions.</p>
+                <ul>
+                    <li>Medical record pre-review</li>
+                    <li>90-minute deep-dive call</li>
+                    <li>Written summary of findings</li>
+                    <li>Prioritized action plan</li>
+                </ul>
+            </div>
+            <div class="tier-cta">
+                <a href="#" class="btn-outline">Request Consult</a>
+            </div>
+        </div>
+
+        <div class="tier-row">
+            <div class="tier-meta">
+                <h4>Retainer</h4>
+                <h2>Active Advocacy</h2>
+                <div class="tier-price">$2,500 / Month</div>
+            </div>
+            <div class="tier-details">
+                <p>Ongoing advocacy for clients navigating active treatment or complex care transitions. Limited to 5
+                    concurrent clients.</p>
+                <ul>
+                    <li>4 calls/month (45 min each)</li>
+                    <li>Virtual appointment attendance</li>
+                    <li>Continuous record review</li>
+                    <li>Provider communication</li>
+                    <li>24-hour priority response</li>
+                    <li>Care coordination & referrals</li>
+                </ul>
+            </div>
+            <div class="tier-cta">
+                <a href="#" class="btn-outline">Inquire</a>
+            </div>
+        </div>
+
+        <div class="tier-row">
+            <div class="tier-meta">
+                <h4>Premium</h4>
+                <h2>White Glove</h2>
+                <div class="tier-price">$4,500 / Month</div>
+            </div>
+            <div class="tier-details">
+                <p>Full-service advocacy for high-complexity cases (rare disease, active cancer) or family members who
+                    need a dedicated ally fully in their corner. Limited to 2 concurrent clients.</p>
+                <ul>
+                    <li>Unlimited calls & messaging</li>
+                    <li>In-person appointment attendance</li>
+                    <li>Hospital & facility navigation</li>
+                    <li>Direct provider outreach</li>
+                    <li>Same-day response guarantee</li>
+                    <li>Family communication support</li>
+                </ul>
+            </div>
+            <div class="tier-cta">
+                <a href="#" class="btn-outline">Join Waitlist</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h4>Is this what a social worker does?</h4>
+                <p>Social workers focus on psychosocial and insurance navigation. I provide clinical expertise: I read
+                    pathology reports, understand staging, and communicate peer-to-peer with your oncologists .</p>
+            </div>
+            <div class="faq-item">
+                <h4>Do you provide medical treatment?</h4>
+                <p>No. I provide informed guidance and coordination. I am an advocate and clinical navigator, not a
+                    treating clinician or diagnostician.</p>
+            </div>
+            <div class="faq-item">
+                <h4>How is liability handled?</h4>
+                <p>I carry professional liability coverage and every engagement is defined by a clear agreement that
+                    outlines our scope of work.</p>
+            </div>
+            <div class="faq-item">
+                <h4>What about referral fees?</h4>
+                <p>To maintain total clinical integrity, I do not pay or receive referral fees from any physician or
+                    institution.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <span class="brand-name">Human Kind Advocates</span>
+        <p style="font-size: 0.8rem; opacity: 0.7;">&copy; 2026 Patient Advocacy with Compassion</p>
+    </footer>
+
+</body>
+
+</html>
