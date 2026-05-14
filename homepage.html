@@ -10,7 +10,8 @@
 
         :root {
             --bg-beige: #F5F2ED;
-            --royal-blue: #0038A8;
+            --navy: #0A2240;         /* Primary Authority Anchor */
+            --royal-blue: #0038A8;   /* Interactive & Accent Color */
             --text-dark: #1A1A1A;
             --text-muted: #555555;
             --white: #FFFFFF;
@@ -29,13 +30,11 @@
             line-height: 1.6;
         }
 
-        h1,
-        h2,
-        h3,
-        h4 {
+        /* All headers default to Navy for trust/authority */
+        h1, h2, h3, h4 {
             font-family: 'Cormorant Garamond', serif;
             font-weight: 400;
-            color: var(--royal-blue);
+            color: var(--navy);
         }
 
         /* Navigation */
@@ -57,6 +56,7 @@
             gap: 1rem;
         }
 
+        /* Logo box uses Royal Blue for the brand pop */
         .logo-box {
             width: 40px;
             height: 40px;
@@ -73,6 +73,7 @@
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.6rem;
             font-style: italic;
+            color: var(--navy);
         }
 
         .nav-links a {
@@ -83,9 +84,14 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             font-weight: 600;
+            transition: color 0.3s ease;
         }
 
-        /* Act I: The Hero - Subtly Asymmetric */
+        .nav-links a:hover {
+            color: var(--royal-blue);
+        }
+
+        /* Act I: The Hero */
         .hero {
             padding: 6rem 5% 10rem;
             display: grid;
@@ -113,10 +119,10 @@
             max-width: 480px;
         }
 
-        /* BREAKING THE LINE: Button overlaps slightly */
+        /* Primary Buttons: Navy base, Royal Blue hover */
         .hero-btn {
             display: inline-block;
-            background: var(--royal-blue);
+            background: var(--navy);
             color: white;
             padding: 1.2rem 3rem;
             text-decoration: none;
@@ -129,6 +135,7 @@
         }
 
         .hero-btn:hover {
+            background: var(--royal-blue);
             transform: translate(-5px, -5px);
             box-shadow: 20px 20px 0 var(--white);
         }
@@ -160,6 +167,7 @@
             list-style: none;
         }
 
+        /* Badges use Royal Blue as an accent */
         .badge-item {
             display: flex;
             align-items: center;
@@ -178,7 +186,7 @@
             background: var(--royal-blue);
         }
 
-        /* Act II: Case Study with Pull-Quote */
+        /* Act II: Case Study */
         .case-study {
             padding: 10rem 5%;
             background: var(--bg-beige);
@@ -219,7 +227,7 @@
             margin: 2rem auto;
         }
 
-        /* Act III: Service Tiers - The "Shelf" Effect */
+        /* Act III: Service Tiers */
         .tiers-section {
             padding: 10rem 5%;
             background: var(--white);
@@ -246,6 +254,7 @@
             position: relative;
         }
 
+        /* Hover reveals the Royal Blue accent border */
         .tier-card:hover {
             background: var(--white);
             border-color: var(--royal-blue);
@@ -267,6 +276,7 @@
             margin-bottom: 1.5rem;
         }
 
+        /* Price text stands out in Royal Blue */
         .price-tag {
             font-size: 1.1rem;
             font-weight: 600;
@@ -275,6 +285,24 @@
             display: block;
             border-bottom: 1px solid rgba(0, 56, 168, 0.1);
             padding-bottom: 1rem;
+        }
+
+        /* Tier Links: Navy base, Royal Blue hover */
+        .tier-link {
+            color: var(--navy);
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            border-bottom: 2px solid rgba(10, 34, 64, 0.3);
+            padding-bottom: 4px;
+            align-self: flex-start;
+            transition: all 0.3s ease;
+        }
+
+        .tier-card:hover .tier-link {
+            color: var(--royal-blue);
+            border-color: var(--royal-blue);
         }
 
         /* Partners & Intake */
@@ -314,9 +342,10 @@
             color: var(--royal-blue);
         }
 
+        /* Footer uses Navy as the ultimate grounding element */
         footer {
             padding: 6rem 5%;
-            background: var(--royal-blue);
+            background: var(--navy);
             color: var(--white);
             text-align: left;
             display: flex;
@@ -373,8 +402,7 @@
         <div class="case-grid">
             <div class="case-image"></div>
             <div class="case-text">
-                <h4
-                    style="text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; margin-bottom: 1.5rem; font-weight: 600;">
+                <h4 style="text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; margin-bottom: 1.5rem; font-weight: 600;">
                     Impact Study</h4>
                 <h2 style="font-size: 3.5rem; margin-bottom: 2rem; line-height: 1.1;">The cost of a wrong turn.</h2>
                 <p style="margin-bottom: 2rem; font-size: 1.1rem; color: var(--text-muted);">A client was told surgery
@@ -412,8 +440,7 @@
                 <span class="price-tag">$500</span>
                 <p>The clearest 90 minutes you'll spend on this diagnosis. Walk away knowing exactly where you
                     stand.</p>
-                <a href="#"
-                    style="color: var(--royal-blue); text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 0.8rem; border-bottom: 1px solid; padding-bottom: 4px; align-self: flex-start;">Inquire</a>
+                <a href="#" class="tier-link">Inquire</a>
             </div>
             <div class="tier-card">
                 <span class="label">Monthly Retainer</span>
@@ -421,16 +448,14 @@
                 <span class="price-tag">$2,500 / mo</span>
                 <p>Ongoing advocacy for clients actively navigating treatment, transitions, or complex care
                     decisions.</p>
-                <a href="#"
-                    style="color: var(--royal-blue); text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 0.8rem; border-bottom: 1px solid; padding-bottom: 4px; align-self: flex-start;">Inquire</a>
+                <a href="#" class="tier-link">Inquire</a>
             </div>
             <div class="tier-card">
                 <span class="label">Premium Support</span>
                 <h3>White Glove</h3>
                 <span class="price-tag">$4,500 / mo</span>
                 <p>Full-service advocacy for high-complexity cases. Someone fully in your corner, 24/7.</p>
-                <a href="#"
-                    style="color: var(--royal-blue); text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 0.8rem; border-bottom: 1px solid; padding-bottom: 4px; align-self: flex-start;">Inquire</a>
+                <a href="#" class="tier-link">Inquire</a>
             </div>
         </div>
     </section>
@@ -468,7 +493,7 @@
             <div style="padding: 2rem; border: 1px solid var(--royal-blue); background: var(--white);">
                 <p style="font-style: italic; color: var(--royal-blue); margin-bottom: 1rem;">"Clinical integrity is my
                     priority. I do not pay or receive referral fees."</p>
-                <span style="font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-style: italic;">Kim —
+                <span style="font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-style: italic; color: var(--navy);">Kim —
                     Patient Advocate, PA-C</span>
             </div>
         </div>
