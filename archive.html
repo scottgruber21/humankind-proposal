@@ -9,6 +9,7 @@
         
         :root {
             --bg-beige: #F5F2ED; 
+            --navy: #0A2240;
             --royal-blue: #0038A8; 
             --text-dark: #1A1A1A;
             --text-muted: #555555;
@@ -17,13 +18,13 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background-color: var(--bg-beige); color: var(--text-dark); font-family: 'Inter', sans-serif; line-height: 1.6; }
-        h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 400; color: var(--royal-blue); }
+        h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 400; color: var(--navy); }
         
         /* Navigation (Consistent with previous mockups) */
         nav { padding: 2rem 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(0,0,0,0.05); }
         .logo-area { display: flex; align-items: center; gap: 1rem; }
         .logo-box { width: 35px; height: 35px; background: var(--royal-blue); border-radius: 4px; }
-        .brand-name { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-style: italic; }
+        .brand-name { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-style: italic; color: var(--navy); }
         .nav-links a { text-decoration: none; color: var(--text-dark); margin-left: 2rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
 
         /* Archive Header - Asymmetrical layout */
@@ -36,7 +37,7 @@
         .featured-img { flex: 1.2; background: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80') center/cover; min-height: 500px; }
         .featured-content { flex: 1; padding: 5rem; display: flex; flex-direction: column; justify-content: center; }
         .featured-content .label { text-transform: uppercase; font-size: 0.75rem; letter-spacing: 2px; color: var(--royal-blue); font-weight: 600; margin-bottom: 1rem; }
-        .featured-content h2 { font-size: 3rem; margin-bottom: 1.5rem; line-height: 1.1; }
+        .featured-content h2 { font-size: 3rem; margin-bottom: 1.5rem; line-height: 1.1; color: var(--navy); }
         .featured-content p { color: var(--text-muted); margin-bottom: 2rem; }
 
         /* The List - Minimalist vertical rows */
@@ -45,7 +46,7 @@
             display: grid; 
             grid-template-columns: 1fr 3fr 1.5fr; 
             padding: 3rem 0; 
-            border-bottom: 1px solid rgba(0, 56, 168, 0.1); 
+            border-bottom: 1px solid rgba(10, 34, 64, 0.1); 
             align-items: baseline;
             text-decoration: none;
             color: inherit;
@@ -53,11 +54,12 @@
         }
         .post-row:hover { background: rgba(255,255,255,0.4); padding-left: 2rem; }
         .post-date { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #888; }
-        .post-title h3 { font-size: 2rem; color: var(--text-dark); transition: color 0.3s; }
+        .post-title h3 { font-size: 2rem; color: var(--navy); transition: color 0.3s; }
         .post-row:hover .post-title h3 { color: var(--royal-blue); }
         .post-excerpt { font-size: 0.95rem; color: var(--text-muted); text-align: right; font-style: italic; font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; }
 
-        footer { padding: 4rem 5%; background: var(--royal-blue); color: var(--white); display: flex; justify-content: space-between; align-items: center; }
+        footer { padding: 4rem 5%; background: var(--navy); color: var(--white); display: flex; justify-content: space-between; align-items: center; }
+        footer .brand-name { color: var(--white); }
         .footer-integrity { font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase; opacity: 0.7; }
     </style>
 </head>
@@ -133,7 +135,7 @@
     </main>
 
     <footer>
-        <span class="brand-name" style="color: white;">Human Kind Advocates</span>
+        <span class="brand-name">Human Kind Advocates</span>
         <span class="footer-integrity">Integrity Focused &bull; No Referral Fees</span>
     </footer>
 

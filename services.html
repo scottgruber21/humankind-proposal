@@ -10,6 +10,7 @@
 
         :root {
             --bg-beige: #F5F2ED;
+            --navy: #0A2240;
             --royal-blue: #0038A8;
             --text-dark: #1A1A1A;
             --text-muted: #555555;
@@ -35,7 +36,7 @@
         h4 {
             font-family: 'Cormorant Garamond', serif;
             font-weight: 400;
-            color: var(--royal-blue);
+            color: var(--navy);
         }
 
         nav {
@@ -69,6 +70,7 @@
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.5rem;
             font-style: italic;
+            color: var(--navy);
         }
 
         .nav-links a {
@@ -79,6 +81,11 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--royal-blue);
         }
 
         /* Hero */
@@ -111,7 +118,7 @@
 
         .pillar-item {
             padding-bottom: 3rem;
-            border-bottom: 1px solid rgba(0, 56, 168, 0.1);
+            border-bottom: 1px solid rgba(10, 34, 64, 0.1);
         }
 
         .pillar-item h3 {
@@ -134,7 +141,7 @@
             grid-template-columns: 1.5fr 2.5fr 1fr;
             gap: 4rem;
             padding: 5rem 0;
-            border-bottom: 1px solid rgba(0, 56, 168, 0.2);
+            border-bottom: 1px solid rgba(10, 34, 64, 0.2);
             align-items: flex-start;
         }
 
@@ -191,10 +198,10 @@
 
         .btn-outline {
             display: inline-block;
-            border: 1px solid var(--royal-blue);
+            border: 1px solid var(--navy);
             padding: 1rem 2rem;
             text-decoration: none;
-            color: var(--royal-blue);
+            color: var(--navy);
             font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -204,6 +211,7 @@
 
         .btn-outline:hover {
             background: var(--royal-blue);
+            border-color: var(--royal-blue);
             color: white;
         }
 
@@ -226,7 +234,7 @@
         .faq-item h4 {
             font-size: 1.8rem;
             margin-bottom: 1rem;
-            color: var(--royal-blue);
+            color: var(--navy);
         }
 
         .faq-item p {
@@ -235,11 +243,15 @@
 
         footer {
             padding: 4rem 5%;
-            background: var(--royal-blue);
+            background: var(--navy);
             color: var(--white);
             display: flex;
             justify-content: space-between;
             align-items: center;
+        }
+
+        footer .brand-name {
+            color: var(--white);
         }
     </style>
 </head>

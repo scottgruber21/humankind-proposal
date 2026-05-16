@@ -9,6 +9,7 @@
         
         :root {
             --bg-beige: #F5F2ED; 
+            --navy: #0A2240;
             --royal-blue: #0038A8; 
             --text-dark: #1A1A1A;
             --white: #FFFFFF;
@@ -16,11 +17,11 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background-color: var(--white); color: var(--text-dark); font-family: 'Inter', sans-serif; line-height: 1.8; }
-        h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--royal-blue); }
+        h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 400; color: var(--navy); }
 
         /* Global Header (Static) */
         nav { padding: 1.5rem 5%; display: flex; justify-content: space-between; align-items: center; background: var(--bg-beige); border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; }
-        .brand-name { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-style: italic; color: var(--royal-blue); text-decoration: none; }
+        .brand-name { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-style: italic; color: var(--navy); text-decoration: none; }
 
         /* Article Header (Only needs Title & Date) */
         .article-header { padding: 8rem 5% 4rem; text-align: center; max-width: 900px; margin: 0 auto; }
@@ -68,7 +69,7 @@
             opacity: 0.7;
         }
 
-        footer { padding: 4rem 5%; background: #fafafa; border-top: 1px solid #eee; text-align: center; font-size: 0.8rem; color: #999; }
+        footer { padding: 4rem 5%; background: var(--navy); border-top: 1px solid #eee; text-align: center; font-size: 0.8rem; color: var(--white); }
     </style>
 </head>
 <body>
